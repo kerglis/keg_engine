@@ -1,0 +1,4 @@
+%h1= t("devise.profile")
+
+= simple_form_for @user, :url => user_url, :html => { :id => "profile_form", :class => "form-horizontal" } do |f|
+  = render :partial => "form", :locals => { :f => f }

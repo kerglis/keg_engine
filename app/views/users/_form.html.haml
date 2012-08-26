@@ -1,0 +1,9 @@
+= f.input :email, :disabled => true
+= f.input :first_name
+= f.input :last_name
+
+=# f.input :gender, :as => :radio_buttons, :collection => [[t("male"), "m"], [t("female"), "f"]]
+=# f.input :birth_date, :as => :string, :input_html => {:class => "datepicker", :data => { :"date-format" => "dd.mm.yyyy" } }
+
+.form-actions
+  = f.submit t("save"), :class => "btn btn-primary"

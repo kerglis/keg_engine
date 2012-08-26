@@ -1,0 +1,8 @@
+.navbar
+  .navbar-inner
+    .container-fluid
+      .logo
+        = link_to AppConfig[:site_fullname], admin_url, :class => "admin"
+
+      = render :partial => "admin/shared/toolbar"
+      = render :partial => "shared/toolbar_user"

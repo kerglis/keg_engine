@@ -1,0 +1,90 @@
+lv:
+
+  save: "Saglabāt"
+  welcome: "Sveiki, %{name}"
+  profile_name: "Profils: %{name}"
+  male: "vīr."
+  female: "siev."
+  all_rights_reserved: "Visas tiesības paturētas"
+
+  edit_model: "Rediģēt: %{model}"
+  create_model: "Jauns: %{model}"
+
+  tree:
+    title: "Koks"
+    error: "Pieprasītā izmaiņa netika pieņemta un koks tika atgriezts uz iepriekšējo stāvokli. Mēģiniet vēlreiz."
+    instruction: "* Right-click uz mapi - lai piekļūtu izvēlnei"
+
+
+  navi:
+    to_navigation: "» Uz navigāciju"
+    to_content: "» Uz saturu"
+    home: "Sākumlapa"
+    catalogue: "Sortiments"
+    stock: "Noliktava"
+    special: "Akcija"
+
+  info:
+    address: "Miera iela 17, Rīga LV-1001, Latvija"
+    phone: "Tālrunis: +371 67371615"
+    fax: "Fakss: +371 67517377"
+    email: "E-pasts: "
+
+
+  error:
+    product:
+      choose_one_taxon: "Izvēlieties vismaz vienu kategoriju"
+    no_image: "nav attēla"
+    no_images: "nav attēlu"
+
+    general_error: "Kļūda"
+    routing_error: "Lapa <strong>%{route}</strong> nav atrasta!"
+    err_404:
+      title: "Nav atrasts"
+      text: "Jūsu pieprasītā lapa nav atrasta"
+
+  content: "Saturs"
+  show_in_menu: "Rādīt iekš menu"
+
+  public_area: "Publiskā daļa"
+  admin_area: "Admin daļa"
+
+  state: "Statuss"
+  active: "Aktīvs"
+  ready: "Sagatavots"
+  approved: "Apstiprināts"
+  inactive: "Neaktīvs"
+  deleted: "Dzēsts"
+  canceled: "Atcelts"
+  accepted: "Akceptēts"
+  archived: "Arhivēts"
+  editing: "Rediģēšana"
+  restored: "Atjaunots"
+  activate: "Aktivizēt"
+  deactivate: "Deaktivizēt"
+  loading: "Ielādē"
+
+  back: "« Atpakaļ"
+  back_to_collection: "« Atpakaļ uz sarakstu"
+
+  create: "Izveidot jaunu"
+  create_new: "Jauns: %{model}"
+  edit: "Rediģēt"
+  edit_existing: "Rediģēt: %{model}"
+  search: "Meklēt"
+
+  rename: "Pārsaukt"
+  swap_state: "Mainīt statusu"
+  cut: "Izgriezt"
+  paste: "Ielīmēt"
+  delete: "Dzēst"
+  confirm_deletion: "Dzēšanas apstiprināšana"
+  confirm_delete: "Tiešām dzēst?"
+  confirm_restore: "Tiešām atjaunot?"
+  confirm_deactivate: "Tiešām deaktivizēt?"
+  server_error: "Serveris atgrieza kļūdu"
+
+  will_paginate:
+    next_label: "Tālāk &rarr;"
+    previous_label: "&larr; Atpakaļ"
+    page_gap: "..."

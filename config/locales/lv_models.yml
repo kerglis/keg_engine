@@ -1,0 +1,17 @@
+lv:
+  activerecord:
+    models:
+      user:
+        one: "Lietotājs"
+        other: "Lietotāji"
+
+    attributes:
+      user:
+        first_name: "Vārds"
+        last_name: "Uzvārds"
+        email: "E-pasts"
+        password: "Parole"
+        password_confirmation: "Parole vēlreiz"
+        gender: "Dzimums"
+        birth_date: "Dzimšanas datums"
+        remember_me: "Uz ilgāku laiku"
