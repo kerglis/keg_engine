@@ -14,4 +14,4 @@ lv:
         password_confirmation: "Parole vēlreiz"
         gender: "Dzimums"
         birth_date: "Dzimšanas datums"
-        remember_me: "Uz ilgāku laiku"
+        remember_me: "Palikt iekšā"

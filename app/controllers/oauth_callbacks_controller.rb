@@ -1,14 +1,6 @@
 class OauthCallbacksController < Devise::OmniauthCallbacksController
 
-  before_filter :set_locale
-
-  def set_locale
-    I18n.locale = params[:locale].to_sym rescue I18n.default_locale
-  end
-
-  def default_url_options(options={})
-    { :locale => I18n.locale }
-  end
+  include SetLocale
 
   def facebook
     @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
