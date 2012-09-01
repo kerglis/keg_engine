@@ -44,6 +44,24 @@ $green: #006600;
 .pagination { margin: 0;}
 td.c, th.c, .c {text-align: center; }
 
+span
+{
+  &.inline
+  {
+    display: inline;
+  }
+}
+
+label
+{
+  &.collection_radio_buttons
+  {
+    display: inline;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+}
+
 a
 {
   &.switch

@@ -7,17 +7,18 @@ module KegController
 
       helper KegEngine::Engine.helpers
 
+      include SetLocale
+
       layout          :get_layout
       after_filter    :store_location, :only => [ :index, :show ]
       before_filter   :set_locale
       before_filter   :load_rpp
+      before_filter   :set_user_current
       helper_method   :title, :set_title
 
       rescue_from ActiveRecord::RecordNotFound do
         render(:file => 'shared/err_404', :layout => 'application', :status => :not_found )
       end
-
-      include SetLocale
 
       def store_location
         session[:return_to] = request.path
@@ -92,6 +93,11 @@ module KegController
         end
       rescue
       end
+
+      def set_user_current
+        User.current = current_user if User.respond_to?(:current=)
+      end
+
 
     protected
       def render_404(exception = nil)
