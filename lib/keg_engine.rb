@@ -1,5 +1,6 @@
 require "devise"
 require "app_config"
+require "acts_as_list"
 require "simple_form"
 require "state_machine"
 require "will_paginate"
