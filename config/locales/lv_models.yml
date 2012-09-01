@@ -4,14 +4,29 @@ lv:
       user:
         one: "Lietotājs"
         other: "Lietotāji"
+      note:
+        one: "Dienas darbs"
+        other: "Dienas darbi"
 
     attributes:
       user:
         first_name: "Vārds"
         last_name: "Uzvārds"
         email: "E-pasts"
+        code: "Kods"
+        default_rate: "Stundas likme"
+
         password: "Parole"
         password_confirmation: "Parole vēlreiz"
-        gender: "Dzimums"
-        birth_date: "Dzimšanas datums"
         remember_me: "Palikt iekšā"
+
+
+      note:
+        date: "Datums"
+        uom: "Mērvienība"
+        value: "Vērtība"
+        description: "Apraksts"
+        job: "Pakalpojums"
+        client: "Klients"
+
+

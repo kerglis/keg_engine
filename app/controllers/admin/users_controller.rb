@@ -8,6 +8,10 @@ class Admin::UsersController < Admin::BaseController
     destroy_object
   end
 
+  def swap
+    swap_object
+  end
+
 protected
 
   def collection

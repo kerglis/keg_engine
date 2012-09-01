@@ -114,10 +114,6 @@ module KegHelper
     end
   end
 
-  def url_options_authenticate?(params = {})
-    current_user.admin? ? true : false
-  end
-
   def attachment_link(asset)
     link_to(icon(asset.icon) + " " + asset.attachment_file_name, asset.attachment.url) if asset
   end
@@ -136,8 +132,6 @@ module KegHelper
     options[:extra_html] ||= ""
 
     destination_url = send("#{options[:route]}_path")
-
-    return("") unless url_options_authenticate?(Rails.application.routes.recognize_path(destination_url))
 
     klass = options[:label].to_s.classify.constantize
     link = link_to(t2(klass) + options[:extra_html], destination_url)

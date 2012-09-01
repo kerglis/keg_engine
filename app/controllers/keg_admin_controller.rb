@@ -21,7 +21,7 @@ module KegAdminController
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
         end
-      rescue
+      #rescue
       end
 
       def swap_field

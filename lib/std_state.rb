@@ -20,11 +20,6 @@ module StdState
         end
       end
 
-      def self.find_for_authentication(conditions={})
-        conditions[:state] = "active"
-        find(:first, :conditions => conditions)
-      end
-
       def valid_for_activation?
         valid?
       end

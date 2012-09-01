@@ -22,7 +22,9 @@
         %b.caret
       %ul.dropdown-menu
         %li= link_to t("devise.sign_in"), new_user_session_url
-        - User.omniauth_providers.each do |provider|
-          %li= link_to t("devise.sign_in_with", :provider => provider.to_s.titleize).html_safe, user_omniauth_authorize_path(provider)
+
+        - if User.respond_to?(:omniauth_providers)
+          - User.omniauth_providers.each do |provider|
+            %li= link_to t("devise.sign_in_with", :provider => provider.to_s.titleize).html_safe, user_omniauth_authorize_path(provider)
 
   = render :partial => "shared/locales"
