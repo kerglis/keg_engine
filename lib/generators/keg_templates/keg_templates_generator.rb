@@ -1,7 +1,7 @@
-class HamlTemplatesGenerator < Rails::Generators::Base
+class KegTemplatesGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 
-  def generate_haml_templates
+  def generate_keg_templates
     files = ["_form", "show", "edit", "index", "new"]
 
     files.each do |file|
