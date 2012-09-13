@@ -5,6 +5,8 @@ host_nice:              "KEG Engine.lv"
 email_from:             "KEG Engine <keg_engine@keg_engine.lv>"
 email:                  "keg_engine@keg_engine.lv"
 rpp:                    20
-locales:                "lv,en"
+locales:
+  - lv
+  - en
 
 ga_account:             "UA-xxxxxxxx"

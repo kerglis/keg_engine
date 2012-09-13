@@ -34,5 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'inherited_resources'
 
   s.add_development_dependency 'thin'
+  s.add_development_dependency 'capistrano', '~> 2.9.0'
+  s.add_development_dependency 'capistrano-ext', '~> 1.2.1'
 
 end

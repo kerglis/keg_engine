@@ -6,7 +6,7 @@ module SetLocale
       before_filter :set_locale
 
       def set_locale
-        @locales = AppConfig[:locales].split(/[\/,]/).map(&:to_sym)
+        @locales = AppConfig[:locales].map(&:to_sym)
         locale = params[:locale].to_sym rescue nil
         I18n.locale = locale if @locales.include?(locale)
         I18n.locale ||= @locales.first
