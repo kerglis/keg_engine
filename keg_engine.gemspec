@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'twitter-bootstrap-rails'
   s.add_dependency 'devise'
   s.add_dependency 'omniauth-facebook'
-  s.add_dependency 'app_config'
+  s.add_dependency 'config_spartan'
   s.add_dependency 'acts_as_list'
   s.add_dependency 'rspec-rails'
   s.add_dependency 'factory_girl_rails'
