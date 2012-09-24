@@ -1,5 +1,5 @@
 require "devise"
-require "app_config"
+require "config_spartan"
 require "acts_as_list"
 require "simple_form"
 require "state_machine"
