@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'will_paginate'
   s.add_dependency 'inherited_resources'
 
+  s.add_development_dependency 'quiet_assets'
   s.add_development_dependency 'thin'
   s.add_development_dependency 'capistrano', '~> 2.9.0'
   s.add_development_dependency 'capistrano-ext', '~> 1.2.1'

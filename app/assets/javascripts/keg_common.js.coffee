@@ -206,6 +206,9 @@ $ ->
 
   $("[placeholder]").addClass("placeholder")
 
+  $("[data-nicedit]").each ->
+    new nicEditor().panelInstance($(this).attr("id"))
+
   $('.datepicker').datepicker
     format: 'dd.mm.yyyy'
     weekStart: 1
