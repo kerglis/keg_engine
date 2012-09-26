@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'meta_search'
   s.add_dependency 'will_paginate'
   s.add_dependency 'inherited_resources'
+  s.add_dependency 'awesome_nested_set'
 
   s.add_development_dependency 'quiet_assets'
   s.add_development_dependency 'thin'
