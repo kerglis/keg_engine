@@ -6,7 +6,6 @@ require 'state_machine'
 require 'will_paginate'
 require 'inherited_resources'
 require 'meta_search'
-require 'preferences'
 require 'keg_engine/engine'
 
 module KegEngine

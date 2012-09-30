@@ -9,7 +9,6 @@ gemspec
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'preferences', :git => 'https://github.com/kerglis/preferences.git'
 
 group :assets do
   gem 'sass-rails'
