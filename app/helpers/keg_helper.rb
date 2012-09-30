@@ -140,7 +140,7 @@ module KegHelper
 
     selected = if options[:match_path]
       pattern = (options[:match_path].class == Array) ? options[:match_path].join('|') : options[:match_path]
-      request.request_uri.index(/\/admin\/?(#{pattern})/) != nil
+      request.path.index(/\/admin\/?(#{pattern})/) != nil
     else
       args.include?(controller.controller_name.to_sym)
     end
