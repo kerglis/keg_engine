@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Kristaps Erglis"]
   s.email       = ["kristaps.erglis@gmail.com"]
   s.homepage    = ""
-  s.summary     = "Summary of KegEngine."
-  s.description = "Description of KegEngine."
+  s.summary     = "KegEngine - private set of models/assets/etc to bootstrap new projects"
+  s.description = "KegEngine - private set of models/assets/etc to bootstrap new projects"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

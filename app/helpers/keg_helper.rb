@@ -71,18 +71,34 @@ module KegHelper
     options.reverse_merge! :action =>   :swap_field                 unless options.key? :action
     options.reverse_merge! :html => {}                              unless options.key? :html
 
-    icon_active = icon_active(options)
-    icon_inactive = icon_inactive(options)
     field_name = options[:field]
 
     html[:title] ||= I18n.t("swap")
     path = Rails.application.routes.recognize_path(options[:url])
     swap_path = {:controller => path[:controller], :id => resource.id, :action => options[:action], :field => field_name }
-    icon = (resource[field_name]) ? icon_active : icon_inactive
+    icn = (resource[field_name]) ? icon_active(options) : icon_inactive(options)
 
-    link_to(icon, swap_path, { :remote => true }, html)
+    link_to(icn, swap_path, { :remote => true }, html)
   rescue
     "-"
+  end
+
+  def link_to_swap_preference(resource, options = {}, html = {})
+    options.reverse_merge! :url =>      resource_url(resource)      unless options.key? :url
+    options.reverse_merge! :action =>   :swap_preference            unless options.key? :action
+    options.reverse_merge! :html => {}                              unless options.key? :html
+
+    pref_name = options[:pref]
+
+    html[:title] ||= I18n.t("swap")
+    path = Rails.application.routes.recognize_path(options[:url])
+    swap_path = {:controller => path[:controller], :id => resource.id, :action => options[:action], :pref => pref_name }
+
+    icn = (resource.prefs[pref_name]) ? icon_active(options) : icon_inactive(options)
+
+    link_to(icn, swap_path, {:remote => true}, html)
+#  rescue
+#    "-"
   end
 
   def flag(locale, options = {})

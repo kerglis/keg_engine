@@ -3,6 +3,8 @@ module KegAdminController
   def self.included(base)
     base.class_eval do
 
+      include TranslationHelper
+
       layout        :get_layout
       before_filter :authenticate_admin
       before_filter :load_rpp
@@ -29,12 +31,29 @@ module KegAdminController
         field = params[:field]
         @object.update_attribute(field, !@object[field])
         @klass = @object.class.name.underscore.to_sym
-        @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@klass))
+        @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@object.class))
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
         end
       rescue
+      end
+
+      def swap_preference
+        @object = resource
+
+        pref = params[:pref]
+
+        @object.write_preference(pref, !@object.prefs[pref])
+        @object.save(:validade => false)
+
+        @klass = @object.class.name.underscore.to_sym
+        @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@object.class))
+        respond_to do |format|
+          format.html { flash[:notice] = @flash_str; redirect_to collection_url }
+          format.js
+        end
+      #rescue
       end
 
     protected
