@@ -155,9 +155,14 @@ $.fn.bind_counter = ->
     $(this).countdown($data)
 
 $.fn.bind_bluecloth =  ->
+  $(this).wysiwym(Wysiwym.Markdown)
+
+  w = $(this).width()
+
   $id = $(this).attr("id") + "_bluecloth"
-  $(this).after $("<div/>").attr("id", $id).addClass("well bluecloth-preview pull-right")
+  $(this).after $("<div/>").attr("id", $id).addClass("well bluecloth-preview")
   $prev_el = $(this).next()
+  $prev_el.width(w - 25)
   $prev_el.formatize $(this)
   $(this).bind "keyup", ->
     $prev_el.formatize $(this)
@@ -209,8 +214,8 @@ $ ->
   $("[data-nicedit]").each ->
     new nicEditor().panelInstance($(this).attr("id"))
 
-  $('[data-wysiwym]').each ->
-    $(this).wysiwym(Wysiwym.Markdown)
+  $("[data-bluecloth]").each ->
+    $(this).bind_bluecloth()
 
   $('.datepicker').datepicker
     format: 'dd.mm.yyyy'

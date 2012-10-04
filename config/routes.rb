@@ -26,7 +26,8 @@ Rails.application.routes.draw do
 
   #   root :to => "welcome#index"
   # end
-
   # match '/' => 'welcome#index', :locale => I18n.default_locale
+
+  match '/formatizer' => 'utils#formatizer'
 
 end

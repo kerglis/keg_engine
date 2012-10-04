@@ -108,10 +108,8 @@ label
     cursor: pointer;
     width: 125px;
   }
-  &.open
-  {
-    background: url("icons/arrow-270-medium.png") no-repeat 100% 100%;
-  }
+  &.open {background: url("icons/arrow-270-medium.png") no-repeat 100% 100%; }
 }
 
 .sortable {td, li { cursor: move } }
+.bluecloth-preview {margin: 1em 0; }

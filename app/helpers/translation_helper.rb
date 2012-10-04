@@ -43,4 +43,31 @@ module TranslationHelper
     t("edit_model", :model => klass.model_name.human).downcase.capitalize
   end
 
+
+  def bc_(str)
+    BlueCloth.new(str).to_html
+  end
+
+  def t_(object, key, bluecloth = true)
+    str = if object.nil?
+      key
+    else
+      object.send(key) rescue ""
+    end
+
+    if str
+      str.scan(/\{[^\}]*\}/).each do |param_str|
+        param = param_str.match(/\{(.*)\}/)[1].to_sym
+        val = if object.nil?
+          ":#{param}".to_s.gsub("_", '\_')
+        else
+          object.send(param) rescue ""
+        end
+        str = str.gsub(param_str, val.to_s)
+      end
+    end
+
+    bluecloth ? bc_(str).html_safe : str
+  end
+
 end
