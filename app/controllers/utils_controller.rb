@@ -1,4 +1,4 @@
-class UtilsController < BaseController
+class UtilsController < ApplicationController
 
   include TranslationHelper
 

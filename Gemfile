@@ -9,6 +9,7 @@ gemspec
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
+gem 'bluecloth'
 
 group :assets do
   gem 'sass-rails'

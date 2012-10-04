@@ -244,6 +244,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bluecloth
   capistrano (~> 2.9.0)
   capistrano-ext (~> 1.2.1)
   coffee-rails

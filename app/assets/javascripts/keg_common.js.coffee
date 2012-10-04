@@ -170,7 +170,7 @@ $.fn.bind_bluecloth =  ->
 $.fn.formatize = (src) ->
   el = $(this)
   $.ajax
-    url: "/formatizer"
+    url: "/lv/formatizer"
     data:
       text: src.val()
     success: (data) ->
