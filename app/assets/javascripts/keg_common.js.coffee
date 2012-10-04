@@ -209,6 +209,9 @@ $ ->
   $("[data-nicedit]").each ->
     new nicEditor().panelInstance($(this).attr("id"))
 
+  $('[data-wysiwym]').each ->
+    $(this).wysiwym(Wysiwym.Markdown)
+
   $('.datepicker').datepicker
     format: 'dd.mm.yyyy'
     weekStart: 1
