@@ -2,5 +2,7 @@
 *= require bootstrap
 *= require datepicker
 *= require wysiwym
+*= require token-input
+*= require token-input-facebook
 *= require keg_common
 */

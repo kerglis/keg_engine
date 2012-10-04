@@ -2,5 +2,5 @@
 //= require bootstrap-datepicker
 //= require nicEdit
 //= require wysiwym
-//= require showdown
+//= require tokeninput
 //= require keg_common

@@ -10,6 +10,11 @@ lv:
   edit_model: "Rediģēt: %{model}"
   create_model: "Jauns: %{model}"
 
+  tokeninput:
+    hint_text: "Meklēt eksitējošu"
+    no_results_text: "Nav atrasts"
+    searching_text: "Meklēju..."
+
   tree:
     title: "Koks"
     error: "Pieprasītā izmaiņa netika pieņemta un koks tika atgriezts uz iepriekšējo stāvokli. Mēģiniet vēlreiz."

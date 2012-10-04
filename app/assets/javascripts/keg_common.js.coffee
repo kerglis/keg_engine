@@ -229,5 +229,15 @@ $ ->
   $("[data-boolean-value]").each ->
     $(this).bind_boolean_value()
 
+  $("[data-token-input]").each ->
+    $(this).tokenInput $(this).data("token-input"),
+      theme: "facebook"
+      prePopulate: $(this).data("token-pre")
+      preventDuplicates: true
+      crossDomain: false
+      hintText: $(this).data("token-hint-text")
+      noResultsText: $(this).data("token-no-results-text")
+      searchingText: $(this).data("token-searching-text")
+
   $("#flash_panel").delay(3000).fadeOut 3000
 
