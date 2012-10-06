@@ -99,7 +99,7 @@ $.fn.bind_switches = ->
         $(this).addClass "open"
         el.show()
 
-$.fn.bind_clearable_fields = ->
+bind_clearable_fields = ->
   $("[data-clearable-field]").each ->
     input = $(this)
     form = (if input.length > 0 then $(input[0].form) else $())
@@ -112,7 +112,7 @@ $.fn.bind_clearable_fields = ->
       input.val ""
       form.submit()
 
-$.fn.bind_filter_html_elements = ->
+bind_filter_html_elements = ->
   $("[data-filter-html]").on "keyUp", ->
     q = $(this).val()
     src_tag = $(this).data("src-tag")
@@ -132,10 +132,15 @@ $.fn.bind_filter_html_elements = ->
       else
         $(id).show()
 
-$.fn.bind_button_urls = ->
+bind_button_urls = ->
   $("[data-button-url]").on "click", ->
     window.location = $(this).data("button-url")
     false
+
+bind_datepicker = ->
+  $('.datepicker').datepicker
+    format: 'dd.mm.yyyy'
+    weekStart: 1
 
 $.fn.bind_counter = ->
   $data = $(this).data()
@@ -197,15 +202,20 @@ $.fn.add_fields = (link, association, content) ->
   if $func
     eval "$(link).#{$func}"
 
+  $callback = $(link).data("callback-after")
+  if $callback
+    eval "#{$callback}"
+
 $ ->
 
   $("a[rel=popover]").popover()
   $(".tooltip").tooltip()
   $("a[rel=tooltip]").tooltip()
 
-  $.fn.bind_clearable_fields()
-  $.fn.bind_filter_html_elements()
-  $.fn.bind_button_urls()
+  bind_clearable_fields()
+  bind_filter_html_elements()
+  bind_button_urls()
+  bind_datepicker()
 
   $("[data-counter='true']").bind_counter()
 
@@ -213,13 +223,8 @@ $ ->
 
   $("[data-nicedit]").each ->
     new nicEditor().panelInstance($(this).attr("id"))
-
   $("[data-bluecloth]").each ->
     $(this).bind_bluecloth()
-
-  $('.datepicker').datepicker
-    format: 'dd.mm.yyyy'
-    weekStart: 1
 
   $("[data-checkboxes-clone]").each ->
     $(this).bind_checkboxes_clone()
