@@ -8,6 +8,7 @@ require 'will_paginate'
 require 'inherited_resources'
 require 'meta_search'
 require 'keg_engine/engine'
+require 'twitter-bootstrap-rails'
 
 module KegEngine
 end
