@@ -11,6 +11,16 @@ fixHelper = (e, ui) ->
     $(this).width $(this).width()
   ui
 
+$.fn.bind_sortable = ->
+  $(this).sortable
+    helper: fixHelper
+    update: (event, ui) ->
+      $.ajax
+        type: "POST"
+        data: $(this).sortable("serialize", { key: $(this).data("sortable-key")})
+        url: $(this).data("sortable-url")
+      $(this).parent().effect "highlight", {}, 2000
+
 $.fn.convert_remote_links = ->
   $("[remote-links]").find("a").each ->
     $(this).attr("data-remote", "true") unless $(this).attr("href") is "#"
@@ -217,8 +227,9 @@ $ ->
   bind_button_urls()
   bind_datepicker()
 
-  $("[data-counter='true']").bind_counter()
+  $(".sortable").bind_sortable()
 
+  $("[data-counter='true']").bind_counter()
   $("[placeholder]").addClass("placeholder")
 
   $("[data-nicedit]").each ->

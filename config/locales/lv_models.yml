@@ -4,15 +4,6 @@ lv:
       user:
         one: "Lietotājs"
         other: "Lietotāji"
-      note:
-        one: "Dienas darbs"
-        other: "Dienas darbi"
-      client:
-        one: "Klients"
-        other: "Klienti"
-      job:
-        one: "Pakalpojums"
-        other: "Pakalpojumi"
 
     attributes:
       user:
@@ -20,37 +11,6 @@ lv:
         last_name: "Uzvārds"
         full_name: "Vārds Uzvārds"
         email: "E-pasts"
-        code: "Kods"
-        default_rate: "Stundas likme"
-
         password: "Parole"
         password_confirmation: "Parole vēlreiz"
-        remember_me: "Palikt iekšā"
-
-      client:
-        name: "Nosaukums"
-        reg_no: "Reģ. nr."
-        jure_address: "Juridiskā adrese"
-        fact_address: "Faktiskā adrese"
-        bank: "Banka"
-        bank_code: "Bankas kods"
-        account: "Konta nr."
-        person: "Kontaktpersona"
-        email: "E-pasts"
-        phone: "Tālrunis"
-        fax: "Fakss"
-
-      job:
-        name: "Pakalpojums"
-
-      note:
-        date: "Datums"
-        uom: "Mērvienība"
-        value: "Vērtība"
-        description: "Apraksts"
-        job_id: "Pakalpojums"
-        client_id: "Klients"
-        hrs: "st."
-        pcs: "gab."
-
-
+        remember_me: "Atcerēties mani"
