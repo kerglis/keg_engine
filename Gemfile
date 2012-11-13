@@ -9,13 +9,12 @@ gemspec
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'bluecloth'
 
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  gem 'therubyracer'
+  # gem 'therubyracer'
   gem 'twitter-bootstrap-rails'
 end
 
