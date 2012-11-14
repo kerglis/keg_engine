@@ -26,7 +26,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'config_spartan'
   s.add_dependency 'acts_as_list'
   s.add_dependency 'rspec-rails'
-  s.add_dependency 'factory_girl_rails', '~> 1.7'
   s.add_dependency 'simple_form'
   s.add_dependency 'state_machine'
   s.add_dependency 'meta_search'
