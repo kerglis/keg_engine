@@ -169,28 +169,6 @@ $.fn.bind_counter = ->
 
     $(this).countdown($data)
 
-$.fn.bind_bluecloth =  ->
-  $(this).wysiwym(Wysiwym.Markdown)
-
-  w = $(this).width()
-
-  $id = $(this).attr("id") + "_bluecloth"
-  $(this).after $("<div/>").attr("id", $id).addClass("well bluecloth-preview")
-  $prev_el = $(this).next()
-  $prev_el.width(w - 25)
-  $prev_el.formatize $(this)
-  $(this).bind "keyup", ->
-    $prev_el.formatize $(this)
-
-$.fn.formatize = (src) ->
-  el = $(this)
-  $.ajax
-    url: "/lv/formatizer"
-    data:
-      text: src.val()
-    success: (data) ->
-      el.html data.text
-
 $.fn.remove_fields = (link) ->
   $(link).prev("input[type=hidden]").val "1"
   $(link).closest(".fields").hide(400)
@@ -234,8 +212,6 @@ $ ->
 
   $("[data-nicedit]").each ->
     new nicEditor().panelInstance($(this).attr("id"))
-  $("[data-bluecloth]").each ->
-    $(this).bind_bluecloth()
 
   $("[data-checkboxes-clone]").each ->
     $(this).bind_checkboxes_clone()
