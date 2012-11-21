@@ -2,6 +2,6 @@
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
 //= require nicEdit
-//= require wysiwym
+//= require redactor-rails
 //= require tokeninput
 //= require keg_common
