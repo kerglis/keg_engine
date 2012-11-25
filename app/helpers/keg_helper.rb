@@ -8,6 +8,10 @@ module KegHelper
     controller.class.name.split("::").first == "Admin"
   end
 
+  def icon_boolean_selector(f, method, icon_true, icon_false, title_true = "", title_false = "")
+    render :partial => "admin/shared/icon_boolean_selector", :locals => {:f => f, :method => method, :title_true => title_true, :title_false => title_false, :icon_true => icon_true, :icon_false => icon_false }
+  end
+
   def link_to_edit(resource, options = {})
     editable = resource.editable? rescue true # ja nav f-cija - ļaujam rediģēt
     options.reverse_merge! :url => edit_resource_url(resource) unless options.key? :url

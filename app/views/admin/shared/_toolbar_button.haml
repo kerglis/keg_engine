@@ -1,7 +1,7 @@
-- @butt = buttons rescue nil
+- buttons ||= []
 
 .pull-right
   = link_to text, link, :class => 'btn btn-primary'
-  - if @butt
-    - @butt.each do |text, link, icon|
-      = link_to text, link, :class => "btn"
+  - buttons.each do |text, link, icon|
+    - icn = "#{icon(icon)} " if icon
+    = link_to "#{icn}#{text}".html_safe, link, :class => "btn"
