@@ -16,8 +16,10 @@ module KegController
       before_filter   :set_user_current
       helper_method   :title, :set_title
 
-      rescue_from ActiveRecord::RecordNotFound do
-        render(:file => 'shared/err_404', :layout => 'application', :status => :not_found )
+      unless Rails.env.development?
+        rescue_from ActiveRecord::RecordNotFound do
+          render(:file => 'shared/err_404', :layout => 'application', :status => :not_found )
+        end
       end
 
       def store_location
