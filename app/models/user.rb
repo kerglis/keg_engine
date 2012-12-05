@@ -51,7 +51,7 @@ class User < ActiveRecord::Base
   end
 
   def greeting
-    full_name || email
+    full_name.blank? ? email : full_name
   end
 
   def full_name
