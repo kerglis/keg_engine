@@ -5,6 +5,7 @@ module SetUser
       validates_presence_of :user_id
       before_save :set_user
       belongs_to :user
+      attr_accessible :user, :user_id
     end
   end
 
