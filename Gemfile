@@ -14,6 +14,7 @@ gem 'redactor-rails'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'less-rails'
   gem 'uglifier'
   gem 'therubyracer', '~> 0.10.2'
   gem 'libv8', '~> 3.3.10'
