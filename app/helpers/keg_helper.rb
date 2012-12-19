@@ -154,22 +154,25 @@ module KegHelper
     destination_url = send("#{options[:route]}_path")
 
     klass = options[:label].to_s.classify.constantize
-    link = link_to(t2(klass) + options[:extra_html], destination_url)
 
-    css_classes = []
+    if can? :read, klass
+      link = link_to(t2(klass) + options[:extra_html], destination_url)
 
-    selected = if options[:match_path]
-      pattern = (options[:match_path].class == Array) ? options[:match_path].join('|') : options[:match_path]
-      request.path.index(/\/admin\/?(#{pattern})/) != nil
-    else
-      args.include?(controller.controller_name.to_sym)
+      css_classes = []
+
+      selected = if options[:match_path]
+        pattern = (options[:match_path].class == Array) ? options[:match_path].join('|') : options[:match_path]
+        request.path.index(/\/admin\/?(#{pattern})/) != nil
+      else
+        args.include?(controller.controller_name.to_sym)
+      end
+      css_classes << 'active' if selected
+
+      if options[:css_class]
+        css_classes << options[:css_class]
+      end
+      content_tag('li', link, :class => css_classes.join(' '))
     end
-    css_classes << 'active' if selected
-
-    if options[:css_class]
-      css_classes << options[:css_class]
-    end
-    content_tag('li', link, :class => css_classes.join(' '))
   end
 
 end

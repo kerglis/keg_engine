@@ -8,6 +8,7 @@ require 'inherited_resources'
 require 'meta_search'
 require 'keg_engine/engine'
 require 'twitter-bootstrap-rails'
+require 'redactor-rails'
 
 module KegEngine
 end

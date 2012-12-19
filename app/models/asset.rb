@@ -2,6 +2,8 @@ class Asset < ActiveRecord::Base
 
   belongs_to :uploadable, :polymorphic => true
 
+  attr_accessible :attachment
+
   acts_as_list
 
   def scope_condition
