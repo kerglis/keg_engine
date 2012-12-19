@@ -15,7 +15,8 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
-  # gem 'therubyracer'
+  gem 'therubyracer', '~> 0.10.2'
+  gem 'libv8', '~> 3.3.10'
   gem 'twitter-bootstrap-rails'
 end
 
