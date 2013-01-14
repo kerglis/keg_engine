@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'haml-rails'
   s.add_dependency 'sass-rails'
   s.add_dependency 'less-rails'
-  s.add_dependency 'twitter-bootstrap-rails', '~> 2.1.4'
+  s.add_dependency 'twitter-bootstrap-rails'
   s.add_dependency 'devise'
   s.add_dependency 'omniauth-facebook'
   s.add_dependency 'config_spartan'

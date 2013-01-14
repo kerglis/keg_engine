@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :rememberable, :registerable, :recoverable, :trackable, :validatable, :omniauthable
 
+  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation
+
   def self.find_for_facebook_oauth(access_token, signed_in_resource = nil)
     data = access_token.extra.raw_info
     if user = User.find_by_email(data["email"])
