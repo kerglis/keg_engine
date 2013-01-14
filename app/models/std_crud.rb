@@ -7,10 +7,13 @@ module StdCrud
     end
 
     base.class_eval do
-      [:destroy, :swap].each do |method|
-        define_method method do |arg|
-          self.send "#{method}_object"
-        end
+
+      def destroy
+        destroy_object
+      end
+
+      def swap
+        swap_object
       end
 
       def create
