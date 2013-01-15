@@ -36,11 +36,11 @@ module TranslationHelper
   end
 
   def tN(klass)
-    t("create_new", :model => klass.model_name.human)#.downcase.capitalize
+    I18n.t("create_new", :model => klass.model_name.human)#.downcase.capitalize
   end
 
   def tE(klass)
-    t("edit_model", :model => klass.model_name.human)#.downcase.capitalize
+    I18n.t("edit_model", :model => klass.model_name.human)#.downcase.capitalize
   end
 
 end

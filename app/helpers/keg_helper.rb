@@ -151,7 +151,7 @@ module KegHelper
     options[:route] ||=  "admin_#{args.first}"
     options[:extra_html] ||= ""
 
-    destination_url = send("#{options[:route]}_path")
+    destination_url = options[:url] || send("#{options[:route]}_path")
 
     klass = options[:label].to_s.classify.constantize
 

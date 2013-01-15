@@ -115,12 +115,16 @@ bind_clearable_fields = ->
     form = (if input.length > 0 then $(input[0].form) else $())
     link = $("<a href=\"#\" class=\"active_field_clear\">x</a>")
     $(this).after link
-    input.bind "change", ->
-      form.submit()
+    input.on
+      change: ->
+        form.submit()
+      changeDate: ->
+        form.submit()
 
-    link.bind "click", ->
-      input.val ""
-      form.submit()
+    link.on
+      click: ->
+        input.val ""
+        form.submit()
 
 bind_filter_html_elements = ->
   $("[data-filter-html]").on "keyUp", ->
