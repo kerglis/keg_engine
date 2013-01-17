@@ -44,6 +44,14 @@ class User < ActiveRecord::Base
     }
   end
 
+  def self.current=(user)
+    Thread.current[:user_current] = user
+  end
+
+  def self.current
+    Thread.current[:user_current]
+  end
+
   def is_admin?
     admin?
   end
