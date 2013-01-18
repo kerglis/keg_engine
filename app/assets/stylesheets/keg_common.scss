@@ -113,3 +113,10 @@ label
 
 .sortable {td, li { cursor: move } }
 .bluecloth-preview {margin: 1em 0; }
+
+input
+{
+  &.flag-lv { background: url("flags/flag_lv_dim.gif") no-repeat 98% 50%; }
+  &.flag-ru { background: url("flags/flag_ru_dim.gif") no-repeat 98% 50%; }
+  &.flag-en { background: url("flags/flag_en_dim.gif") no-repeat 98% 50%; }
+}
