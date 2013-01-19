@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   #     root :to => 'users#index'
   #   end
 
-  #   resource :user, :only => [ :show, :update ]
+  #   resource :user, :controller => "user_profile" do
+  #     resource :pswd, :controller => "user_password"
+  #   end
 
   #   root :to => "welcome#index"
   # end
