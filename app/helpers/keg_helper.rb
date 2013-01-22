@@ -155,8 +155,10 @@ module KegHelper
 
     klass = options[:label].to_s.classify.constantize
 
+    name = options[:name] || t2(klass)
+
     if can? :read, klass
-      link = link_to(t2(klass) + options[:extra_html], destination_url)
+      link = link_to( name+ options[:extra_html], destination_url)
 
       css_classes = []
 
