@@ -66,6 +66,9 @@ module KegController
         name = self.class.to_s
         session[name] = params[:search]
         session[name] ||= {}
+
+        session[:return_to] = params[:return_to] if params[:return_to]
+
         redirect_back_or_default "/"
       end
 
