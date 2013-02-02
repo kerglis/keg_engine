@@ -34,6 +34,10 @@ module KegHelper
     link_to(options[:label], options[:url], in_params)
   end
 
+  def phone_to_top
+    "<div class='visible-phone'><a href='#top'><i class='icon-arrow-up'>#{t("navi.to_top")}</i></a></div>".html_safe
+  end
+
   def link_to_delete(resource, options = {})
     link_to_destroy(resource, options)
   end

@@ -11,6 +11,9 @@ lv:
   edit_model: "Rediģēt: %{model}"
   create_model: "Jauns: %{model}"
 
+  navi:
+    to_top: Uz augšu
+
   tree:
     title: "Koks"
     error: "Pieprasītā izmaiņa netika pieņemta un koks tika atgriezts uz iepriekšējo stāvokli. Mēģiniet vēlreiz."
