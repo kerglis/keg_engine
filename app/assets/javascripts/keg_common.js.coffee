@@ -225,6 +225,13 @@ $ ->
   $("[data-boolean-value]").each ->
     $(this).bind_boolean_value()
 
+  $("[data-active-select]").each ->
+    $url = $(this).data("active-select")
+    $(this).on
+      change: ->
+        $to_url = $url.replace /__template__/, $(this).val()
+        window.location = $to_url
+
   $("[data-token-input]").each ->
     $(this).tokenInput $(this).data("token-input"),
       theme: "facebook"
