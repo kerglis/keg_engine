@@ -3,7 +3,7 @@
     %a.dropdown-toggle{:href=>"#", :"data-toggle" => "dropdown"}
       %i.icon-user
       - if current_user
-        = current_user.greeting
+        %span.hidden-phone= current_user.greeting
       %b.caret
 
     - if current_user

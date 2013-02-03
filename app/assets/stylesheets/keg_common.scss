@@ -30,8 +30,15 @@ h4
   p { margin: 0 0 5px 0 }
 }
 
+.navbar-inner
+{
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .logo
 {
+  margin-left: 20px;
   a
   {
     background: url("logo.png") no-repeat 15px 5px;
