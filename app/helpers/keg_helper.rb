@@ -61,7 +61,7 @@ module KegHelper
     options.reverse_merge! :action =>   :swap                       unless options.key? :action
 
     path = Rails.application.routes.recognize_path(options[:url])
-    swap_path = {:controller => path[:controller], :id => resource.id, :action => options[:action] }
+    swap_path = {:controller => path[:controller], :id => resource.to_param, :action => options[:action] }
 
     icn = (options[:state])       ? icon_active(options) : icon_inactive(options)
     in_options = {
@@ -83,7 +83,7 @@ module KegHelper
 
     html[:title] ||= I18n.t("swap")
     path = Rails.application.routes.recognize_path(options[:url])
-    swap_path = {:controller => path[:controller], :id => resource.id, :action => options[:action], :field => field_name }
+    swap_path = {:controller => path[:controller], :id => resource.to_param, :action => options[:action], :field => field_name }
     icn = (resource[field_name]) ? icon_active(options) : icon_inactive(options)
 
     link_to(icn, swap_path, { :remote => true }, html)
@@ -100,7 +100,7 @@ module KegHelper
 
     html[:title] ||= I18n.t("swap")
     path = Rails.application.routes.recognize_path(options[:url])
-    swap_path = {:controller => path[:controller], :id => resource.id, :action => options[:action], :pref => pref_name }
+    swap_path = {:controller => path[:controller], :id => resource.to_param, :action => options[:action], :pref => pref_name }
 
     icn = (resource.prefs[pref_name]) ? icon_active(options) : icon_inactive(options)
 
