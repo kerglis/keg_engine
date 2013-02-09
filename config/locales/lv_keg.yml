@@ -33,12 +33,14 @@ lv:
 
   state:
     choose_state: "Izvēlēties statusu"
-    change_to: "Painīt statusu uz %{state}"
+    change_to: "Mainīt statusu uz: %{state}"
+    changed_to: "Statuss nomainīts uz: %{state}"
     new: "Jauns"
     accepted: "Akceptēts"
     rejected: "Noraidīts"
     active: "Aktīvs"
     inactive: "Neaktīvs"
+
 
   back: "« Atpakaļ"
   back_to_collection: "« Atpakaļ uz sarakstu"

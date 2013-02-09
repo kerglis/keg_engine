@@ -18,12 +18,12 @@ module KegAdminController
         @object.swap
         @klass = @object.class.name.underscore.to_sym
         state = @object.state
-        @flash_str = I18n.t("state_changed_to_#{state}")
+        @flash_str = I18n.t("state.changed_to", :state => state)
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
         end
-      #rescue
+      rescue
       end
 
       def swap_field
@@ -45,7 +45,7 @@ module KegAdminController
         pref = params[:pref]
 
         @object.write_preference(pref, !@object.prefs[pref])
-        @object.save(:validade => false)
+        @object.save(:validate => false)
 
         @klass = @object.class.name.underscore.to_sym
         @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@object.class))
@@ -53,7 +53,24 @@ module KegAdminController
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
         end
-      #rescue
+      rescue
+      end
+
+      def set_state_to
+        @object = resource
+        state = params[:state]
+
+        # TODO
+        # check against available states from state_machine
+
+        @object.send(state)
+        @klass = @object.class.name.underscore.to_sym
+        @flash_str = I18n.t("state.changed_to", :state => tt(@klass, @object.state))
+        respond_to do |format|
+          format.html { flash[:notice] = @flash_str; redirect_to collection_url }
+          format.js
+        end
+      # rescue
       end
 
     protected
