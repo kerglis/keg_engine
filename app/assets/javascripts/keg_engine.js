@@ -2,6 +2,8 @@
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
 //= require nicEdit
-//= require redactor-rails
+//= require redactor-rails/redactor
+//= require redactor-rails/config-lv
+//= require redactor-rails/lv
 //= require tokeninput
 //= require keg_common
