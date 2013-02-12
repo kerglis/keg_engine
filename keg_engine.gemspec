@@ -33,11 +33,11 @@ Gem::Specification.new do |s|
   s.add_dependency 'will_paginate'
   s.add_dependency 'inherited_resources'
   s.add_dependency 'awesome_nested_set'
-  s.add_dependency 'redactor-rails'
+  s.add_dependency 'redactor-rails', '0.3.2'
 
   s.add_development_dependency 'quiet_assets'
   s.add_development_dependency 'thin'
-  s.add_development_dependency 'capistrano', '~> 2.9.0'
-  s.add_development_dependency 'capistrano-ext', '~> 1.2.1'
+  s.add_development_dependency 'capistrano'
+  s.add_development_dependency 'rvm-capistrano'
 
 end

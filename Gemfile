@@ -9,7 +9,7 @@ gemspec
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'redactor-rails'
+gem 'redactor-rails', '0.3.2'
 
 group :assets do
   gem 'sass-rails'
