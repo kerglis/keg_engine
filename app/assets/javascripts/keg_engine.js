@@ -1,4 +1,5 @@
 //= require jquery-ui
+//= require jquery-migrate
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
 //= require nicEdit
