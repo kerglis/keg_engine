@@ -10,6 +10,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'redactor-rails', '0.3.2'
+gem 'twitter-bootstrap-rails'
 
 group :assets do
   gem 'sass-rails'
@@ -18,7 +19,6 @@ group :assets do
   gem 'uglifier'
   gem 'therubyracer', '~> 0.10.2'
   gem 'libv8', '~> 3.3.10'
-  gem 'twitter-bootstrap-rails'
 end
 
 group :development do
