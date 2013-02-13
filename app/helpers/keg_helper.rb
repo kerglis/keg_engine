@@ -120,7 +120,7 @@ module KegHelper
 
 
   def flag(locale, options = {})
-    image_tag("flags/flag_#{locale}.gif", options)
+    image_tag("flags/#{locale}.png", options)
   end
 
   def icon(icon_name, options = {})
