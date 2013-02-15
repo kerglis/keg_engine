@@ -64,9 +64,12 @@ h4
 {
   position: fixed;
   z-index: 10000;
-  top: 10px;
-  left: 610px;
+
+  top: 20px;
+  left: 50%;
+
   width: 400px;
+  margin-left: -200px;
 }
 
 .form-actions
