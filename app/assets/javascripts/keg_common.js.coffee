@@ -214,6 +214,8 @@ $ ->
   $("[data-counter='true']").bind_counter()
   $("[placeholder]").addClass("placeholder")
 
+  $(".form-vertical").removeClass("form-horizontal")
+
   $("[data-nicedit]").each ->
     new nicEditor().panelInstance($(this).attr("id"))
 
