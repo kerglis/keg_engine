@@ -1,6 +1,7 @@
 /*
 *= require bootstrap
 *= require datepicker
+*= require bootstrap-fileupload
 *= require redactor-rails
 *= require token-input
 *= require token-input-facebook

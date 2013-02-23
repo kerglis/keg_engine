@@ -1,0 +1,10 @@
+.fileupload.fileupload-new{"data-provides" => "fileupload"}
+  .input-append
+    .uneditable-input.span3
+      %i.icon-file.fileupload-exists
+      %span.fileupload-preview
+    %span.btn.btn-file
+      %span.fileupload-new Select file
+      %span.fileupload-exists Change
+      = f.input_field tag_name
+    %a.btn.fileupload-exists{"data-dismiss" => "fileupload", :href => "#"} Remove
