@@ -4,7 +4,7 @@
       %i.icon-file.fileupload-exists
       %span.fileupload-preview
     %span.btn.btn-file
-      %span.fileupload-new Select file
-      %span.fileupload-exists Change
+      %span.fileupload-new= t("file_upload.select_file")
+      %span.fileupload-exists= t("file_upload.change")
       = f.input_field tag_name
-    %a.btn.fileupload-exists{"data-dismiss" => "fileupload", :href => "#"} Remove
+    %a.btn.fileupload-exists{"data-dismiss" => "fileupload", :href => "#"}= t("file_upload.remove")

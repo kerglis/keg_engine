@@ -19,6 +19,11 @@ lv:
     error: "Pieprasītā izmaiņa netika pieņemta un koks tika atgriezts uz iepriekšējo stāvokli. Mēģiniet vēlreiz."
     instruction: "* Right-click uz mapi - lai piekļūtu izvēlnei"
 
+  file_upload:
+    select_file: Datne
+    change: Mainīt
+    remove: Dzēst
+
   error:
     no_image: "nav attēla"
     no_images: "nav attēlu"
