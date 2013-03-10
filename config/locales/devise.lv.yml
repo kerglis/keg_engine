@@ -70,8 +70,8 @@ lv:
       failure: "Neizdevās autorizeties ar %{kind} lietotāju. Iemesls: %{reason}."
     mailer:
       confirmation_instructions:
-        subject: Apstiprināšanas apraksts
+        subject: Konta apstiprināšanas informācija
       reset_password_instructions:
-        subject: Paroles nomainīšanas apraksts
+        subject: Paroles nomainīšanas informācija
       unlock_instructions:
-        subject: Atbloķēšanas apraksts
+        subject: Atbloķēšanas informācija
