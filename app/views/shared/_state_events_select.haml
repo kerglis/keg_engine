@@ -1,5 +1,5 @@
 - exclude = options[:exclude] || [:swap]
-- events = resource.state_events - exclude
+- events = resource.state_events - exclude rescue resource.state_events
 - state = resource.state
 - url = options[:url]
 - klass = resource.class
