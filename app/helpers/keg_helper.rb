@@ -22,7 +22,7 @@ module KegHelper
   def link_to_destroy(resource, options = {})
     options.assert_valid_keys(:url, :confirm, :label)
     options.reverse_merge! :url => resource_url(resource) unless options.key? :url
-    options.reverse_merge! :confirm => t("confirm.delete")
+    options.reverse_merge! :confirm => t("confirm_delete")
     options.reverse_merge! :label => icon("minus-circle", :title => I18n.t("delete")) unless  options.key? :label
 
     in_params = {
@@ -35,7 +35,7 @@ module KegHelper
   end
 
   def phone_to_top
-    "<div class='visible-phone'><a href='#top'><i class='icon-arrow-up'> #{t("navi.to_top")}</i></a></div>".html_safe
+    "<div class='visible-phone'><a href='#top'>#{twicon "arrow-up"} #{t("navi.to_top")}</i></a></div>".html_safe
   end
 
   def link_to_delete(resource, options = {})
