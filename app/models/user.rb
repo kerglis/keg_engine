@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
     params = {
       :email =>       data["email"],
       :password =>    Devise.friendly_token[0,20],
-      :gender =>      data["gender"].first,
+      :gender =>      data["gender"].try(:first),
       :first_name =>  data["first_name"],
       :last_name =>   data["last_name"],
       :birth_date =>  data["birthday"].try(:to_date),
