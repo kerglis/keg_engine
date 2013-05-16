@@ -9,7 +9,7 @@ gemspec
 gem 'devise'
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'redactor-rails', '0.3.2'
+gem 'redactor-rails'#, '0.3.2'
 gem 'twitter-bootstrap-rails'
 
 group :assets do
@@ -17,8 +17,9 @@ group :assets do
   gem 'coffee-rails'
   gem 'less-rails'
   gem 'uglifier'
-  gem 'therubyracer', '~> 0.10.2'
-  gem 'libv8', '~> 3.3.10'
+  # gem 'execjs'
+  gem 'therubyracer'#, '~> 0.10.2'
+  # gem 'libv8', '~> 3.3.10'
 end
 
 group :development do
