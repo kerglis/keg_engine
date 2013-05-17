@@ -13,11 +13,11 @@ class UserPasswordController < ApplicationController
   end
 
   def update
-    if resource.errors.empty?
-      sign_in(:user, resource)
-      respond_with resource, :location => user_path
-    else
-      respond_with resource
+    update! do |format|
+      if resource.errors.empty?
+        sign_in resource, :bypass => true
+        format.html { redirect_to user_path }
+      end
     end
   end
 
