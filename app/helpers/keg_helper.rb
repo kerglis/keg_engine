@@ -34,6 +34,10 @@ module KegHelper
     link_to(options[:label], options[:url], in_params)
   end
 
+  def twicon(icon)
+    "<i class='icon-#{icon}'>"
+  end
+
   def phone_to_top
     "<div class='visible-phone'><a href='#top'>#{twicon "arrow-up"} #{t("navi.to_top")}</i></a></div>".html_safe
   end
