@@ -35,7 +35,7 @@ module KegHelper
   end
 
   def twicon(icon)
-    "<i class='icon-#{icon}'></i>"
+    "<i class='icon-#{icon}'></i>".html_safe
   end
 
   def phone_to_top
