@@ -1,4 +1,4 @@
-//= require jquery-ui
+//= require jquery.ui.all
 //= require jquery-migrate
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
