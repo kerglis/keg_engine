@@ -4,6 +4,6 @@
   = devise_error_messages!
   = f.input  :email
 
-  .form-actions
+  .controls
     = f.submit t("devise.passwords.send_reset_instructions"), :class => "btn btn-primary"
     = render :partial => "devise/shared/links"
