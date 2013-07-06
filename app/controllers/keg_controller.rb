@@ -100,9 +100,8 @@ module KegController
       end
 
       def set_user_current
-        User.current = current_user if User.respond_to?(:current=)
+        User.current = current_user if current_user and User.respond_to?(:current=)
       end
-
 
     protected
       def render_404(exception = nil)
