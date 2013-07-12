@@ -187,8 +187,11 @@ $.fn.add_fields = (link, association, content) ->
     $parent = $($(link).data("parent-selector"))
     $new_el = $parent.append($new_html)
   else
-    $parent = $(link).parents(".well").find("ul")
-    $new_el = $parent.before($new_html)
+    if $parent = $(link).parents(".well").find("ul")
+      $new_el = $parent.append($new_html)
+    else
+      $parent = $(link).parent()
+      $new_el = $parent.before($new_html)
 
   $func = $(link).data("do-after-add")
   if $func
