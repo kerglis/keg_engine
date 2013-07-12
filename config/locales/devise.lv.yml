@@ -2,7 +2,7 @@
 
 lv:
   errors:
-    messages:
+    messages: &devise_messages
       expired: derīgums beidzies, lūdzu piesakieties jaunam
       not_found: netika atrasts
       already_confirmed: ir jau apstiprināts, lūdzu mēģiniet pieslēgties
@@ -13,6 +13,8 @@ lv:
         other: "%{resource} netika saglabāts %{count} kļūdu dēļ:"
 
   devise:
+    messages:
+      <<: *devise_messages
 
     sign_in: Autorizēties
     sign_up: Piereģistrēties
