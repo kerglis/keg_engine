@@ -2,6 +2,7 @@
 //= require jquery-migrate
 //= require twitter/bootstrap
 //= require bootstrap-datepicker
+//= require bootstrap-datepicker.lv
 //= require bootstrap-fileupload
 //= require nicEdit
 //= require redactor-rails/redactor
