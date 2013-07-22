@@ -128,6 +128,8 @@ module KegHelper
   end
 
   def icon(icon_name, options = {})
+    options[:width] ||= 16
+    options[:height] ||= 16
     image_tag("icons/#{icon_name}.png", options)
   end
 
