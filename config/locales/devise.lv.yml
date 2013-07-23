@@ -39,6 +39,8 @@ lv:
       invalid_token: Nekoreta autentifikācijas atslēga.
       timeout: Jūsu sesijas laiks ir beidzies. Lūdzu pieslēdzieties vēlreiz, lai turpinātu.
       inactive: Jūsu lietotajs vēl nav aktivizēts.
+      not_found_in_database: Lietotājs netika atrasts datubāzē.
+
     sessions:
       signed_in: Veiksmīgi pieslēdzies.
       signed_out: Veiksmīgi atslēdzies.
