@@ -253,7 +253,7 @@ DEPENDENCIES
   keg_engine!
   less-rails
   quiet_assets
-  redactor-rails
+  redactor-rails (= 0.3.3)
   rvm-capistrano
   sass-rails
   therubyracer

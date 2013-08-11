@@ -6,7 +6,7 @@
 //= require bootstrap-fileupload
 //= require nicEdit
 //= require redactor-rails/redactor
-//= require redactor-rails/lv
 //= require redactor-rails/config-lv
+//= require redactor-rails/lv
 //= require tokeninput
 //= require keg_common

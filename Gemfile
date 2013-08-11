@@ -10,7 +10,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails'
-gem 'redactor-rails'#, '0.3.2'
+gem 'redactor-rails', '0.3.3'
 gem 'twitter-bootstrap-rails'
 
 group :assets do
