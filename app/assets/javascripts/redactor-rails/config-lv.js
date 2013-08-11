@@ -15,7 +15,9 @@ $(document).ready(
       "css":"style.css",
       "lang":"lv",
       "fixed": true,
-      "paragraphy": false
+      "paragraphy": false,
+      "convertDivs": false,
+      "minHeight": 200
     }
   );
 });
