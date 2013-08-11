@@ -14,7 +14,8 @@ $(document).ready(
       "path":"/assets/redactor-rails",
       "css":"style.css",
       "lang":"lv",
-      "fixed": true
+      "fixed": true,
+      "paragraphy": false
     }
   );
 });
