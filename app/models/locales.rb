@@ -31,7 +31,7 @@ module Locales
 
       def path(locale, params = {})
         method = self.class.to_s.underscore
-        Rails.application.routes.url_helpers.send("#{method}_path", self, params.merge({:locale => locale})).gsub(/#{param_str}$/, param_str(locale))
+        Rails.application.routes.url_helpers.send("#{method}_path", self, params.merge({locale: locale})).gsub(/#{param_str}$/, param_str(locale))
       end
 
       def make_temp_names

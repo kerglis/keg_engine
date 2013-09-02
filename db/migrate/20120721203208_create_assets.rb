@@ -3,8 +3,8 @@ class CreateAssets < ActiveRecord::Migration
     create_table :assets do |t|
       t.string   :attachment_file_name
       t.integer  :uploadable_id
-      t.string   :uploadable_type,      :limit => 25
-      t.string   :type,                 :limit => 25
+      t.string   :uploadable_type,      limit: 25
+      t.string   :type,                 limit: 25
       t.integer  :position
       t.text     :description
 

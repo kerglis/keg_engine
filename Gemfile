@@ -5,25 +5,34 @@ source 'http://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
-# jquery-rails is used by the dummy application
-gem 'devise'
+gem 'rails', '4.0.0'
+
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'haml-rails'
-gem 'redactor-rails', '0.3.3'
-gem 'twitter-bootstrap-rails'
+gem 'turbolinks'
+
+gem 'jbuilder', '~> 1.2'
+
+gem 'redactor-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'meta_search'
 
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+  gem 'coffee-rails', '~> 4.0.0'
   gem 'less-rails'
-  gem 'uglifier'
-  # gem 'execjs'
-  gem 'therubyracer'#, '~> 0.10.2'
-  # gem 'libv8', '~> 3.3.10'
+  gem 'therubyracer'
+  gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap-3'
+  gem 'quiet_assets', group: :development
 end
 
 group :development do
-  gem 'quiet_assets'
   gem 'thin'
+  gem 'capistrano'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end

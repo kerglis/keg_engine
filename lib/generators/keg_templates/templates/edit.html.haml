@@ -1,5 +1,0 @@
-%h1= tE(<%= class_name %>)
-
-= simple_form_for(@<%= singular_table_name %>, :url => resource_url, :html => {:class => "form-horizontal"}) do |f|
-  = render :partial => "form", :locals => { :f => f }
-  = render :partial => "admin/shared/edit_resource_links"

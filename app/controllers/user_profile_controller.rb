@@ -1,7 +1,7 @@
 class UserProfileController < ApplicationController
 
   inherit_resources
-  defaults :resource_class => User, :instance_name => 'user'
+  defaults resource_class: User, instance_name: 'user'
 
   before_filter :authenticate_user!
   before_filter :resource

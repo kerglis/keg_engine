@@ -1,7 +1,7 @@
 class UserPasswordController < ApplicationController
 
   inherit_resources
-  defaults :resource_class => User, :instance_name => 'user'
+  defaults resource_class: User, instance_name: 'user'
 
   before_filter :authenticate_user!
   before_filter :resource
@@ -15,7 +15,7 @@ class UserPasswordController < ApplicationController
   def update
     update! do |format|
       if resource.errors.empty?
-        sign_in resource, :bypass => true
+        sign_in resource, bypass: true
         format.html { redirect_to user_path }
       end
     end

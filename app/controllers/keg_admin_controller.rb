@@ -18,7 +18,7 @@ module KegAdminController
         @object.swap
         @klass = @object.class.name.underscore.to_sym
         state = @object.state
-        @flash_str = I18n.t("state.changed_to", :state => state)
+        @flash_str = I18n.t("state.changed_to", state: state)
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
@@ -31,7 +31,7 @@ module KegAdminController
         field = params[:field]
         @object.update_attribute(field, !@object[field])
         @klass = @object.class.name.underscore.to_sym
-        @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@object.class))
+        @flash_str = I18n.t("flash.actions.update.notice", resource_name: t1(@object.class))
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
@@ -45,10 +45,10 @@ module KegAdminController
         pref = params[:pref]
 
         @object.write_preference(pref, !@object.prefs[pref])
-        @object.save(:validate => false)
+        @object.save(validate: false)
 
         @klass = @object.class.name.underscore.to_sym
-        @flash_str = I18n.t("flash.actions.update.notice", :resource_name => t1(@object.class))
+        @flash_str = I18n.t("flash.actions.update.notice", resource_name: t1(@object.class))
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js
@@ -65,7 +65,7 @@ module KegAdminController
 
         @object.send(state)
         @klass = @object.class.name.underscore.to_sym
-        @flash_str = I18n.t("state.changed_to", :state => tt(@klass, @object.state))
+        @flash_str = I18n.t("state.changed_to", state: tt(@klass, @object.state))
         respond_to do |format|
           format.html { flash[:notice] = @flash_str; redirect_to collection_url }
           format.js

@@ -10,7 +10,7 @@ module KegController
       include SetLocale
 
       layout          :get_layout
-      after_filter    :store_location, :only => [ :index, :show ]
+      after_filter    :store_location, only: [ :index, :show ]
       before_filter   :set_locale
       before_filter   :load_rpp
       before_filter   :set_user_current
@@ -18,7 +18,7 @@ module KegController
 
       unless Rails.env.development?
         rescue_from ActiveRecord::RecordNotFound do
-          render(:file => 'shared/err_404', :layout => 'application', :status => :not_found )
+          render(file: 'shared/err_404', layout: 'application', status: :not_found )
         end
       end
 
@@ -106,8 +106,8 @@ module KegController
     protected
       def render_404(exception = nil)
         respond_to do |type|
-          type.html { render :file    => "#{RAILS_ROOT}/public/404.html", :status => "404 Not Found" }
-          type.all  { render :nothing => true, :status => "404 Not Found" }
+          type.html { render file:    Rail.root.join("public/404.html"), status: "404 Not Found" }
+          type.all  { render nothing: true, status: "404 Not Found" }
         end
       end
 

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   # match '/users/auth/:provider' => 'oauth_callbacks#passthru'
-  # match '/admin' => 'admin/users#index', :locale => I18n.default_locale
+  # match '/admin' => 'admin/users#index', locale: I18n.default_locale
 
   # scope "/:locale" do
 
-  #   devise_for :users, :controllers => { :omniauth_callbacks => "oauth_callbacks" }
+  #   devise_for :users, controllers: { omniauth_callbacks: "oauth_callbacks" }
 
   #   namespace :admin do
 
@@ -19,18 +19,18 @@ Rails.application.routes.draw do
   #       end
   #     end
 
-  #     root :to => 'users#index'
+  #     root to: 'users#index'
   #   end
 
-  #   resource :user, :controller => "user_profile" do
-  #     resource :pswd, :controller => "user_password"
+  #   resource :user, controller: "user_profile" do
+  #     resource :pswd, controller: "user_password"
   #   end
 
-  #   root :to => "welcome#index"
+  #   root to: "welcome#index"
   # end
 
-  # match '/formatizer' => 'utils#formatizer', :locale => I18n.default_locale
-  # match '/' => 'welcome#index', :locale => I18n.default_locale
+  # match '/formatizer' => 'utils#formatizer', locale: I18n.default_locale
+  # match '/' => 'welcome#index', locale: I18n.default_locale
 
 
 end

@@ -1,9 +1,5 @@
 /*
-*= require bootstrap
-*= require datepicker
-*= require bootstrap-fileupload
-*= require redactor-rails
-*= require token-input
-*= require token-input-facebook
-*= require keg_common
+  *= require twitter/bootstrap
+  *= require bootstrap-datepicker
+  *= require keg_common
 */

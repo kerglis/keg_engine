@@ -1,7 +1,7 @@
 module TranslationHelper
   def t(str = "", options = {})
     return if str.nil?
-    options.merge!(:raise => I18n::MissingTranslationData) unless options.key?(:raise)
+    options.merge!(raise: I18n::MissingTranslationData) unless options.key?(:raise)
 
     begin
       value = super(str, options)
@@ -32,15 +32,15 @@ module TranslationHelper
 
   def t2(klass)
     # plural model name
-    klass.model_name.human(:count => 2)
+    klass.model_name.human(count: 2)
   end
 
   def tN(klass)
-    I18n.t("create_new", :model => klass.model_name.human)#.downcase.capitalize
+    I18n.t("create_new", model: klass.model_name.human)
   end
 
   def tE(klass)
-    I18n.t("edit_model", :model => klass.model_name.human)#.downcase.capitalize
+    I18n.t("edit_model", model: klass.model_name.human)
   end
 
 end
