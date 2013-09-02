@@ -11,7 +11,7 @@ errors: &errors
     inclusion: "nav iekļauts sarakstā"
     exclusion: "nav pieejams"
     invalid: "nav derīgs"
-    record_invalid: "Pārbade neizdevās: %{errors}"
+    record_invalid: "Pārbaude neizdevās: %{errors}"
     confirmation: "nesakrīt ar apstiprinājumu"
     accepted: "ir jāpiekrīt"
     empty: "ir jābūt aizpildītam"
