@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rspec-rails'
   s.add_dependency 'simple_form'
   s.add_dependency 'state_machine'
-  s.add_dependency 'meta_search'
+  # s.add_dependency 'meta_search'
   s.add_dependency 'will_paginate'
   s.add_dependency 'inherited_resources'
   s.add_dependency 'awesome_nested_set'
