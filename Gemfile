@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.0'
 
 gem 'jquery-rails'
 gem 'haml-rails'
@@ -17,6 +17,7 @@ gem 'redactor-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'meta_search'
+gem 'bootstrap-sass', '< 3.0'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
@@ -24,7 +25,6 @@ group :assets do
   gem 'coffee-rails', '~> 4.0.0'
   gem 'less-rails'
   gem 'therubyracer'
-  gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap-3'
   gem 'quiet_assets', group: :development
 end
 
