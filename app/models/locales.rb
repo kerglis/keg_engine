@@ -13,7 +13,7 @@ module Locales
       end
 
       def to_param(method = :name)
-        parents = self_and_ancesors rescue nil
+        parents = self_and_ancestors rescue nil
 
         parts = if parents
           [ id, parents.map{|p| p.permalink(method)} ]

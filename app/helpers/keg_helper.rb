@@ -178,7 +178,7 @@ module KegHelper
     name = options[:name] || t2(klass)
 
     if can? :read, klass
-      link = link_to( name+ options[:extra_html], destination_url)
+      link = link_to( name + options[:extra_html], destination_url)
 
       css_classes = []
 
