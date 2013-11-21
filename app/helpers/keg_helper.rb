@@ -23,7 +23,7 @@ module KegHelper
     options.assert_valid_keys(:url, :confirm, :label)
     options.reverse_merge! :url => resource_url(resource) unless options.key? :url
     options.reverse_merge! :confirm => t("confirm_delete")
-    options.reverse_merge! :label => icon("minus-circle", :title => I18n.t("delete")) unless  options.key? :label
+    options.reverse_merge! :label => icon("cross-circle", :title => I18n.t("delete")) unless  options.key? :label
 
     in_params = {
       :remote =>    true,
