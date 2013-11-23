@@ -4,6 +4,7 @@ module StdState
     base.class_eval do
 
       scope :active,  where(:state => :active)
+      scope :by_state, lambda { |is_active| is_active == "true" ? where(:state => :active) : where(:state => :inactive) }
 
       state_machine :initial => :inactive do
 
