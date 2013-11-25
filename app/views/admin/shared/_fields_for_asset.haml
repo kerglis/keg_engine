@@ -1,7 +1,6 @@
 - build_func = "build_#{asset_type.to_s}"
 - asset_obj = object.send(asset_type)
 - asset_obj ||= object.send(build_func)
-- colspan ||= 1
 - thumb_size ||= :thumb
 - normal_size ||= :normal
 
@@ -12,7 +11,7 @@
       = fi.file_field :attachment
       - unless asset_obj.new_record?
         %div{:id => asset_type.to_s}
-          .m05
+          %div{ :style => "margin: 5px 0"}
             - case asset_type
             - when :attachment_file
               = icon(asset_obj.icon)
