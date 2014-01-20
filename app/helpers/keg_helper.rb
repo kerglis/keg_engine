@@ -22,7 +22,7 @@ module KegHelper
   def link_to_destroy(resource, options = {})
     options.assert_valid_keys(:url, :confirm, :label)
     options.reverse_merge! :url => resource_url(resource) unless options.key? :url
-    options.reverse_merge! :confirm => t("confirm_delete")
+    options.reverse_merge! :confirm => t("confirm.delete")
     options.reverse_merge! :label => icon("cross-circle", :title => I18n.t("delete")) unless  options.key? :label
 
     in_params = {
