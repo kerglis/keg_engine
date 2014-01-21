@@ -46,15 +46,15 @@ lv:
     active: "Aktīvs"
     inactive: "Neaktīvs"
 
-
   back: "« Atpakaļ"
   back_to_collection: "« Atpakaļ uz sarakstu"
 
-  create: "Izveidot jaunu"
+  create: Izveidot jaunu
   create_new: "Jauns: %{model}"
-  edit: "Rediģēt"
+  delete: Dzēst
+  edit: Rediģēt
   edit_existing: "Rediģēt: %{model}"
-  search: "Meklēt"
+  search: Meklēt
 
   confirm:
     deletion: "Dzēšanas apstiprināšana"
