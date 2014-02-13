@@ -96,11 +96,11 @@ input
     vertical-align: middle;
   }
 
-  &.placeholder
-  {
-    background: url("icons/magnifier-zoom-dim.png") no-repeat 98% 50%;
-    &:focus { background: none }
-  }
+  // &.placeholder
+  // {
+  //   background: url("icons/magnifier-zoom-dim.png") no-repeat 98% 50%;
+  //   &:focus { background: none }
+  // }
 }
 
 label
