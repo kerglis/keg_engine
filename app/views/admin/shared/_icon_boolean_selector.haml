@@ -1,6 +1,6 @@
 - val = f.object.send(method)
 
-.btn-group{:style => "width:60px;"}
+.btn-group.btn-group-vertical
   %a.btn.btn-mini{:class => (val == "true") && "active", :data => {:"boolean-value" => "true"}, :title => title_true }
     = icon(icon_true)
   %a.btn.btn-mini{:class => (val == "false") && "active", :data => {:"boolean-value" => "false"}, :title => title_false }
