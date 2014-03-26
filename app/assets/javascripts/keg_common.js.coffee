@@ -112,14 +112,14 @@ $.fn.bind_switches = ->
 bind_clearable_fields = ->
   $("[data-clearable-field]").each ->
     $input = $(@)
-    # $form = (if $input.length > 0 then $($input[0].form) else $())
-    $form = $input.parent("form")
+    $form = (if $input.length > 0 then $($input[0].form) else $())
+    # $form = $input.parent("form")
     $link = $("<a href=\"#\" class=\"active_field_clear\"><i class='fa fa-times-circle'></i></a>")
     $(@).after $link
 
     $input.on
       change: ->
-        console.log "change", $input
+        # console.log "change", $input
         $form.submit()
       # changeDate: ->
       #   console.log "changeDate", $input
